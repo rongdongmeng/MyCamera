@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "BeautifulViewController.h"
 
 @interface ViewController ()
 
@@ -19,12 +20,12 @@
 
 }
 
-- (IBAction)makeBeautiful {
 
+- (IBAction)makeBeautiful:(UIButton *)sender {
 
+    BeautifulViewController *controller = [[BeautifulViewController alloc] initWithNibName:@"BeautifulViewController" bundle:nil];
+    [self presentViewController:controller animated:YES completion:nil];
 }
-
-
 
 
 @end
