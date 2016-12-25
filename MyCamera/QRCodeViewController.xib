@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="QRCodeViewController">
+            <connections>
+                <outlet property="resultLabel" destination="3Ln-xw-Vt6" id="fbN-b3-68p"/>
+                <outlet property="scanHeightConstraint" destination="FNs-To-OMz" id="Jaa-8R-TyJ"/>
+                <outlet property="scanImageView" destination="atQ-7G-l3w" id="hQG-5o-ewf"/>
+                <outlet property="scanTopConstraint" destination="B7g-9X-XcX" id="7dS-sA-l1U"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ftv-zs-CaF">
+                    <rect key="frame" x="38" y="184" width="300" height="300"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="qrcode_border" translatesAutoresizingMaskIntoConstraints="NO" id="DoX-Yt-Bhw" userLabel="边框">
+                            <rect key="frame" x="0.0" y="0.0" width="300" height="300"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        </imageView>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="qrcode_scanline_qrcode" translatesAutoresizingMaskIntoConstraints="NO" id="atQ-7G-l3w" userLabel="冲击波">
+                            <rect key="frame" x="0.0" y="-300" width="300" height="300"/>
+                        </imageView>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="DoX-Yt-Bhw" secondAttribute="trailing" id="2hQ-Vd-1gF"/>
+                        <constraint firstItem="atQ-7G-l3w" firstAttribute="centerX" secondItem="DoX-Yt-Bhw" secondAttribute="centerX" id="3Tl-kF-5wI"/>
+                        <constraint firstItem="atQ-7G-l3w" firstAttribute="height" secondItem="DoX-Yt-Bhw" secondAttribute="height" id="9eh-DW-f8A"/>
+                        <constraint firstItem="atQ-7G-l3w" firstAttribute="top" secondItem="DoX-Yt-Bhw" secondAttribute="top" constant="-300" id="B7g-9X-XcX"/>
+                        <constraint firstAttribute="height" constant="300" id="FNs-To-OMz"/>
+                        <constraint firstAttribute="width" constant="300" id="OZm-Tz-rCB"/>
+                        <constraint firstItem="DoX-Yt-Bhw" firstAttribute="leading" secondItem="ftv-zs-CaF" secondAttribute="leading" id="Om3-1i-wlU"/>
+                        <constraint firstItem="DoX-Yt-Bhw" firstAttribute="top" secondItem="ftv-zs-CaF" secondAttribute="top" id="d1g-Gg-xXD"/>
+                        <constraint firstAttribute="bottom" secondItem="DoX-Yt-Bhw" secondAttribute="bottom" id="pE0-vm-Hix"/>
+                        <constraint firstItem="atQ-7G-l3w" firstAttribute="width" secondItem="DoX-Yt-Bhw" secondAttribute="width" id="zA0-dk-GFe"/>
+                    </constraints>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Ln-xw-Vt6">
+                    <rect key="frame" x="38" y="544" width="300" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="0.33333333333333331" green="0.33333333333333331" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="3Ln-xw-Vt6" firstAttribute="trailing" secondItem="ftv-zs-CaF" secondAttribute="trailing" id="Zv2-0K-22t"/>
+                <constraint firstItem="ftv-zs-CaF" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="cWq-dv-INI"/>
+                <constraint firstItem="ftv-zs-CaF" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="ntf-5P-qua"/>
+                <constraint firstItem="3Ln-xw-Vt6" firstAttribute="leading" secondItem="ftv-zs-CaF" secondAttribute="leading" id="rO9-0I-Cm7"/>
+                <constraint firstItem="3Ln-xw-Vt6" firstAttribute="top" secondItem="ftv-zs-CaF" secondAttribute="bottom" constant="60" id="rjx-x6-8ts"/>
+            </constraints>
+            <nil key="simulatedTopBarMetrics"/>
+            <point key="canvasLocation" x="24.5" y="51.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="qrcode_border" width="51" height="51"/>
+        <image name="qrcode_scanline_qrcode" width="218" height="170"/>
+    </resources>
+</document>

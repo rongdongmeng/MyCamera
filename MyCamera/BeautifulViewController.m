@@ -77,10 +77,7 @@
     // 开始采集视频
     [_videoCamera startCameraCapture];
 
-
 }
-
-
 
 
 @end

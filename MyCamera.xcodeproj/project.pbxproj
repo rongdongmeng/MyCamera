@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		B5514641FAFB6E2F2242B53B /* libPods-MyCamera.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7FAA690CA63EE6DFC6E6A4D5 /* libPods-MyCamera.a */; };
+		E748601F1E0FF7B200BFE95B /* AdvancedBeautifulViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E748601D1E0FF7B200BFE95B /* AdvancedBeautifulViewController.m */; };
+		E74860201E0FF7B200BFE95B /* AdvancedBeautifulViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E748601E1E0FF7B200BFE95B /* AdvancedBeautifulViewController.xib */; };
+		E74860241E100B6500BFE95B /* QRCodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E74860221E100B6500BFE95B /* QRCodeViewController.m */; };
+		E74860251E100B6500BFE95B /* QRCodeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E74860231E100B6500BFE95B /* QRCodeViewController.xib */; };
 		E75755BA1E0ACCF3009AEAC4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E75755B91E0ACCF3009AEAC4 /* main.m */; };
 		E75755BD1E0ACCF3009AEAC4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E75755BC1E0ACCF3009AEAC4 /* AppDelegate.m */; };
 		E75755C01E0ACCF3009AEAC4 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E75755BF1E0ACCF3009AEAC4 /* ViewController.m */; };
@@ -22,6 +26,12 @@
 		7FAA690CA63EE6DFC6E6A4D5 /* libPods-MyCamera.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MyCamera.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D6C3A391916248917B785ED /* Pods-MyCamera.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyCamera.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyCamera/Pods-MyCamera.debug.xcconfig"; sourceTree = "<group>"; };
 		B766A2A752FF9DF23D8BCB8E /* Pods-MyCamera.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyCamera.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyCamera/Pods-MyCamera.release.xcconfig"; sourceTree = "<group>"; };
+		E748601C1E0FF7B200BFE95B /* AdvancedBeautifulViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdvancedBeautifulViewController.h; sourceTree = "<group>"; };
+		E748601D1E0FF7B200BFE95B /* AdvancedBeautifulViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdvancedBeautifulViewController.m; sourceTree = "<group>"; };
+		E748601E1E0FF7B200BFE95B /* AdvancedBeautifulViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AdvancedBeautifulViewController.xib; sourceTree = "<group>"; };
+		E74860211E100B6500BFE95B /* QRCodeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QRCodeViewController.h; sourceTree = "<group>"; };
+		E74860221E100B6500BFE95B /* QRCodeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QRCodeViewController.m; sourceTree = "<group>"; };
+		E74860231E100B6500BFE95B /* QRCodeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QRCodeViewController.xib; sourceTree = "<group>"; };
 		E75755B51E0ACCF3009AEAC4 /* MyCamera.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyCamera.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E75755B91E0ACCF3009AEAC4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		E75755BB1E0ACCF3009AEAC4 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -86,6 +96,12 @@
 				E75755D11E0ACE7C009AEAC4 /* BeautifulViewController.h */,
 				E75755D21E0ACE7C009AEAC4 /* BeautifulViewController.m */,
 				E75755D31E0ACE7C009AEAC4 /* BeautifulViewController.xib */,
+				E748601C1E0FF7B200BFE95B /* AdvancedBeautifulViewController.h */,
+				E748601D1E0FF7B200BFE95B /* AdvancedBeautifulViewController.m */,
+				E748601E1E0FF7B200BFE95B /* AdvancedBeautifulViewController.xib */,
+				E74860211E100B6500BFE95B /* QRCodeViewController.h */,
+				E74860221E100B6500BFE95B /* QRCodeViewController.m */,
+				E74860231E100B6500BFE95B /* QRCodeViewController.xib */,
 				E75755C41E0ACCF3009AEAC4 /* Assets.xcassets */,
 				E75755C61E0ACCF3009AEAC4 /* LaunchScreen.storyboard */,
 				E75755C91E0ACCF3009AEAC4 /* Info.plist */,
@@ -173,9 +189,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E74860251E100B6500BFE95B /* QRCodeViewController.xib in Resources */,
 				E75755D51E0ACE7C009AEAC4 /* BeautifulViewController.xib in Resources */,
 				E75755C81E0ACCF3009AEAC4 /* LaunchScreen.storyboard in Resources */,
 				E75755D01E0ACD9E009AEAC4 /* ViewController.xib in Resources */,
+				E74860201E0FF7B200BFE95B /* AdvancedBeautifulViewController.xib in Resources */,
 				E75755C51E0ACCF3009AEAC4 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -236,6 +254,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				E75755D41E0ACE7C009AEAC4 /* BeautifulViewController.m in Sources */,
+				E748601F1E0FF7B200BFE95B /* AdvancedBeautifulViewController.m in Sources */,
+				E74860241E100B6500BFE95B /* QRCodeViewController.m in Sources */,
 				E75755C01E0ACCF3009AEAC4 /* ViewController.m in Sources */,
 				E75755BD1E0ACCF3009AEAC4 /* AppDelegate.m in Sources */,
 				E75755BA1E0ACCF3009AEAC4 /* main.m in Sources */,

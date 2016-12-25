@@ -8,6 +8,8 @@
 
 #import "ViewController.h"
 #import "BeautifulViewController.h"
+#import "AdvancedBeautifulViewController.h"
+#import "QRCodeViewController.h"
 
 @interface ViewController ()
 
@@ -20,10 +22,22 @@
 
 }
 
-
+// 美颜
 - (IBAction)makeBeautiful:(UIButton *)sender {
 
     BeautifulViewController *controller = [[BeautifulViewController alloc] initWithNibName:@"BeautifulViewController" bundle:nil];
+    [self presentViewController:controller animated:YES completion:nil];
+}
+
+// 高级美颜
+- (IBAction)makeAdvancedBeautiful:(UIButton *)sender {
+    AdvancedBeautifulViewController *controller = [[AdvancedBeautifulViewController alloc] init];
+    [self presentViewController:controller animated:YES completion:nil];
+}
+
+// 二维码识别
+- (IBAction)qrCode:(UIButton *)sender {
+    QRCodeViewController *controller = [[QRCodeViewController alloc] init];
     [self presentViewController:controller animated:YES completion:nil];
 }
 

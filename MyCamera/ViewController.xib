@@ -33,12 +33,45 @@
                         <action selector="makeBeautiful:" destination="-1" eventType="touchUpInside" id="58D-9C-ZIE"/>
                     </connections>
                 </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wYH-7h-jzS">
+                    <rect key="frame" x="225" y="50" width="100" height="40"/>
+                    <color key="backgroundColor" red="0.66274509800000003" green="0.66274509800000003" blue="0.66274509800000003" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="MEP-S3-Aat"/>
+                        <constraint firstAttribute="width" constant="100" id="xiz-3B-InQ"/>
+                    </constraints>
+                    <state key="normal" title="高级美颜">
+                        <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <connections>
+                        <action selector="makeAdvancedBeautiful:" destination="-1" eventType="touchUpInside" id="k49-vB-AuZ"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lJU-1g-BC5">
+                    <rect key="frame" x="50" y="140" width="110" height="40"/>
+                    <color key="backgroundColor" red="0.66274509800000003" green="0.66274509800000003" blue="0.66274509800000003" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="Day-Hq-Dr6"/>
+                        <constraint firstAttribute="width" constant="110" id="GO0-fZ-fKI"/>
+                    </constraints>
+                    <state key="normal" title="二维码扫描">
+                        <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <connections>
+                        <action selector="qrCode:" destination="-1" eventType="touchUpInside" id="xRd-Vz-53F"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
+                <constraint firstItem="lJU-1g-BC5" firstAttribute="top" secondItem="6Y8-w8-jCQ" secondAttribute="bottom" constant="50" id="17v-Im-XQe"/>
+                <constraint firstAttribute="trailing" secondItem="wYH-7h-jzS" secondAttribute="trailing" constant="50" id="Llb-mE-r0Z"/>
                 <constraint firstItem="6Y8-w8-jCQ" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="50" id="Xnf-99-3U0"/>
                 <constraint firstItem="6Y8-w8-jCQ" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="50" id="bEt-p3-tG0"/>
+                <constraint firstItem="wYH-7h-jzS" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="50" id="gs6-Nc-3mX"/>
+                <constraint firstItem="lJU-1g-BC5" firstAttribute="leading" secondItem="6Y8-w8-jCQ" secondAttribute="leading" id="wig-Gh-1Is"/>
             </constraints>
+            <point key="canvasLocation" x="24.5" y="52.5"/>
         </view>
     </objects>
 </document>
