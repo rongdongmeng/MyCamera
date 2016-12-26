@@ -99,16 +99,15 @@
 
 - (UIBezierPath *)createPath:(NSArray *)corners {
     UIBezierPath *path = [UIBezierPath bezierPath];
-    NSInteger index = 0;
     CGPoint point;
-    //CFDictionary *dicRef = corners[index++];
-    CGPointMakeWithDictionaryRepresentation((CFDictionaryRef)corners[index++], &point);
+    CGPointMakeWithDictionaryRepresentation((CFDictionaryRef)corners[0], &point);
     [path moveToPoint:point];
 
-    while (index < corners.count) {
-        CGPointMakeWithDictionaryRepresentation((CFDictionaryRef)corners[index++], &point);
-        [path moveToPoint:point];
+    for (NSInteger index = 1; index<corners.count; index++) {
+        CGPointMakeWithDictionaryRepresentation((CFDictionaryRef)corners[index], &point);
+        [path addLineToPoint:point];
     }
+
     //关闭路径
     [path closePath];
 
