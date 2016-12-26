@@ -8,6 +8,7 @@
 
 #import "QRCodeViewController.h"
 #import <AVFoundation/AVFoundation.h>
+#import <CoreFoundation/CoreFoundation.h>
 
 #define ScanImageHeight     300.0
 
@@ -21,6 +22,7 @@
 @property (strong, nonatomic) AVCaptureDeviceInput *inputDevice;
 @property (strong, nonatomic) AVCaptureMetadataOutput *ouputData;
 @property (strong, nonatomic) AVCaptureVideoPreviewLayer *previewLayer;
+@property (strong, nonatomic) CALayer *drawLayer;
 
 @end
 
@@ -28,6 +30,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self setupLayer];
     [self setupCapture];
 }
 
@@ -79,9 +82,58 @@
     [_session startRunning];
 }
 
+- (void)setupLayer {
+    _drawLayer = [CALayer layer];
+    _drawLayer.frame = self.view.bounds;
+    [self.view.layer insertSublayer:_drawLayer atIndex:0];
+}
+
+- (void)drawCorners:(AVMetadataMachineReadableCodeObject *)codeObject {
+    CAShapeLayer *shapeLayer = [CAShapeLayer layer];
+    shapeLayer.lineWidth = 4;
+    shapeLayer.strokeColor = [UIColor greenColor].CGColor;
+    shapeLayer.fillColor = [UIColor clearColor].CGColor;
+    shapeLayer.path = [[self createPath:codeObject.corners] CGPath];
+    [_drawLayer addSublayer:shapeLayer];
+}
+
+- (UIBezierPath *)createPath:(NSArray *)corners {
+    UIBezierPath *path = [UIBezierPath bezierPath];
+    NSInteger index = 0;
+    CGPoint point;
+    //CFDictionary *dicRef = corners[index++];
+    CGPointMakeWithDictionaryRepresentation((CFDictionaryRef)corners[index++], &point);
+    [path moveToPoint:point];
+
+    while (index < corners.count) {
+        CGPointMakeWithDictionaryRepresentation((CFDictionaryRef)corners[index++], &point);
+        [path moveToPoint:point];
+    }
+    //关闭路径
+    [path closePath];
+
+    return path;
+}
+
+- (void)clearDrawLayers {
+    if (_drawLayer == nil) {
+        return;
+    }
+
+    for (CALayer *layer in _drawLayer.sublayers) {
+        [layer removeFromSuperlayer];
+    }
+}
+
 #pragma mark AVCaptureMetadataOutputObjectsDelegate
 - (void)captureOutput:(AVCaptureOutput *)captureOutput didOutputMetadataObjects:(NSArray *)metadataObjects fromConnection:(AVCaptureConnection *)connection {
 
+    [self clearDrawLayers];
+    for (AVMetadataObject *object in metadataObjects) {
+        AVMetadataMachineReadableCodeObject *codeObject = (AVMetadataMachineReadableCodeObject *)[_previewLayer transformedMetadataObjectForMetadataObject:object];
+        [self drawCorners:codeObject];
+        _resultLabel.text = codeObject.stringValue;
+    }
 }
 
 
