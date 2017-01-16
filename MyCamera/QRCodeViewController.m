@@ -28,6 +28,10 @@
 
 @implementation QRCodeViewController
 
+- (void)loadView {
+
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self setupLayer];

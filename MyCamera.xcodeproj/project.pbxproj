@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		B5514641FAFB6E2F2242B53B /* libPods-MyCamera.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7FAA690CA63EE6DFC6E6A4D5 /* libPods-MyCamera.a */; };
+		E70405471E2C73B200F2F692 /* GPUImageBeautyFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = E70405461E2C73B200F2F692 /* GPUImageBeautyFilter.m */; };
+		E704054A1E2C755300F2F692 /* GPUImageCombinationFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = E70405491E2C755300F2F692 /* GPUImageCombinationFilter.m */; };
 		E748601F1E0FF7B200BFE95B /* AdvancedBeautifulViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E748601D1E0FF7B200BFE95B /* AdvancedBeautifulViewController.m */; };
 		E74860201E0FF7B200BFE95B /* AdvancedBeautifulViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E748601E1E0FF7B200BFE95B /* AdvancedBeautifulViewController.xib */; };
 		E74860241E100B6500BFE95B /* QRCodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E74860221E100B6500BFE95B /* QRCodeViewController.m */; };
@@ -26,6 +28,10 @@
 		7FAA690CA63EE6DFC6E6A4D5 /* libPods-MyCamera.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MyCamera.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D6C3A391916248917B785ED /* Pods-MyCamera.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyCamera.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyCamera/Pods-MyCamera.debug.xcconfig"; sourceTree = "<group>"; };
 		B766A2A752FF9DF23D8BCB8E /* Pods-MyCamera.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyCamera.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyCamera/Pods-MyCamera.release.xcconfig"; sourceTree = "<group>"; };
+		E70405451E2C73B200F2F692 /* GPUImageBeautyFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPUImageBeautyFilter.h; sourceTree = "<group>"; };
+		E70405461E2C73B200F2F692 /* GPUImageBeautyFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPUImageBeautyFilter.m; sourceTree = "<group>"; };
+		E70405481E2C755300F2F692 /* GPUImageCombinationFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPUImageCombinationFilter.h; sourceTree = "<group>"; };
+		E70405491E2C755300F2F692 /* GPUImageCombinationFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPUImageCombinationFilter.m; sourceTree = "<group>"; };
 		E748601C1E0FF7B200BFE95B /* AdvancedBeautifulViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdvancedBeautifulViewController.h; sourceTree = "<group>"; };
 		E748601D1E0FF7B200BFE95B /* AdvancedBeautifulViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdvancedBeautifulViewController.m; sourceTree = "<group>"; };
 		E748601E1E0FF7B200BFE95B /* AdvancedBeautifulViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AdvancedBeautifulViewController.xib; sourceTree = "<group>"; };
@@ -67,6 +73,17 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		E70405441E2C735400F2F692 /* Filter */ = {
+			isa = PBXGroup;
+			children = (
+				E70405451E2C73B200F2F692 /* GPUImageBeautyFilter.h */,
+				E70405461E2C73B200F2F692 /* GPUImageBeautyFilter.m */,
+				E70405481E2C755300F2F692 /* GPUImageCombinationFilter.h */,
+				E70405491E2C755300F2F692 /* GPUImageCombinationFilter.m */,
+			);
+			name = Filter;
+			sourceTree = "<group>";
+		};
 		E75755AC1E0ACCF3009AEAC4 = {
 			isa = PBXGroup;
 			children = (
@@ -88,6 +105,7 @@
 		E75755B71E0ACCF3009AEAC4 /* MyCamera */ = {
 			isa = PBXGroup;
 			children = (
+				E70405441E2C735400F2F692 /* Filter */,
 				E75755BB1E0ACCF3009AEAC4 /* AppDelegate.h */,
 				E75755BC1E0ACCF3009AEAC4 /* AppDelegate.m */,
 				E75755BE1E0ACCF3009AEAC4 /* ViewController.h */,
@@ -254,10 +272,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				E75755D41E0ACE7C009AEAC4 /* BeautifulViewController.m in Sources */,
+				E70405471E2C73B200F2F692 /* GPUImageBeautyFilter.m in Sources */,
 				E748601F1E0FF7B200BFE95B /* AdvancedBeautifulViewController.m in Sources */,
 				E74860241E100B6500BFE95B /* QRCodeViewController.m in Sources */,
 				E75755C01E0ACCF3009AEAC4 /* ViewController.m in Sources */,
 				E75755BD1E0ACCF3009AEAC4 /* AppDelegate.m in Sources */,
+				E704054A1E2C755300F2F692 /* GPUImageCombinationFilter.m in Sources */,
 				E75755BA1E0ACCF3009AEAC4 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
